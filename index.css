@@ -36,6 +36,16 @@ footer {
   font-size: xx-large;
   height: "100%";
 }
+
+article {
+  overflow: scroll;
+}
+nav {
+  overflow: scroll;
+}
+aside {
+  overflow: scroll;
+}
 .container-flex {
   display: flex;
   flex-direction: row;
