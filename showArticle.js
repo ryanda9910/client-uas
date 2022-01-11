@@ -17,6 +17,7 @@ const listArticle = document.getElementById("containerParentArticle");
 
 const detailArticle = document.getElementById("containerParentIdArticle");
 
+const titleTagArticle = document.getElementById("articleTitle");
 const headerContainer = document.getElementById("headerContainer");
 const footerContainer = document.getElementById("footerContainer");
 const socialMediaContainer = document.getElementById(
@@ -169,7 +170,6 @@ const createMenuItem = (item) => {
   return itemMenu;
 };
 
-
 // const filterListArticle = (categoryId) => {
 //   removeAllChildNodes(containerParentArticle);
 //   fetch(`${API_URL}/artikel/kategori/${categoryId}`)
@@ -237,6 +237,7 @@ const showArticle = fetch(
     return response.json();
   })
   .then((data) => {
+    titleTagArticle.innerHTML = data.data.nama_artikel;
     detailArticle.appendChild(containerArticle(data?.data));
   })
   .catch((err) => {
