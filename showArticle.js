@@ -16,7 +16,7 @@ const categoryList = document.getElementById("containerCategory");
 const listArticle = document.getElementById("containerParentArticle");
 
 const detailArticle = document.getElementById("containerParentIdArticle");
-
+const footerText = document.getElementById('footerText')
 const titleTagArticle = document.getElementById("articleTitle");
 const headerContainer = document.getElementById("headerContainer");
 const footerContainer = document.getElementById("footerContainer");
@@ -156,6 +156,7 @@ const footerInformation = fetch(`${API_URL}/information`)
     data?.data.map((item) => {
       footerContainer.appendChild(createFooterImageContainer(item));
       footerContainer.appendChild(setDescFooter(item));
+      footerText.innerHTML=item.copyright
     });
   })
   .catch((err) => {
@@ -281,6 +282,6 @@ const setTitleArticle = (item) => {
 
 const setDescriptionArticle = (item) => {
   let descArticle = document.createElement("p");
-  descArticle.innerHTML = item.deskripsi_artikel;
+  descArticle.innerHTML = item.isi;
   return descArticle;
 };

@@ -16,8 +16,7 @@ const categoryList = document.getElementById("containerCategory");
 const listArticle = document.getElementById("containerParentArticle");
 
 const detailArticle = document.getElementById("containerParentIdArticle");
-
-
+const footerText = document.getElementById('footerText')
 const headerContainer = document.getElementById("headerContainer");
 const footerContainer = document.getElementById("footerContainer");
 const socialMediaContainer = document.getElementById(
@@ -157,6 +156,7 @@ const footerInformation = fetch(`${API_URL}/information`)
     data?.data.map((item) => {
       footerContainer.appendChild(createFooterImageContainer(item));
       footerContainer.appendChild(setDescFooter(item));
+      footerText.innerHTML=item.copyright
     });
   })
   .catch((err) => {
