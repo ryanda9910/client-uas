@@ -1,0 +1,300 @@
+header {
+  background-color: powderblue;
+  font-size: xx-large;
+  width: 100%;
+  text-align: center;
+  height: 200px;
+}
+main {
+  background-color: cornsilk;
+}
+nav {
+  background-color: salmon;
+  width: 25%;
+  color: deepskyblue;
+  height: 700px;
+  float: left;
+}
+article {
+  background-color: sandybrown;
+  width: 50%;
+  height: 700px;
+  float: left;
+}
+aside {
+  background-color: cadetblue;
+  width: 25%;
+  height: 700px;
+  float: left;
+}
+footer {
+  background-color: darkorchid;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: xx-large;
+  height: "100%";
+}
+.container-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-flex-footer {
+  display: flex;
+  flex-direction: row;
+}
+.container-social-media {
+  margin-left: 120px;
+}
+
+.container-info-footer {
+  margin-right: 20px;
+}
+
+.social-media {
+  display: block;
+}
+
+.desc-footer {
+  font-size: 20px;
+  right: 20px;
+  color: white;
+  text-align: right;
+}
+
+.footer-title {
+  font-size: 30px;
+  color: white;
+}
+
+.image-footer {
+  width: 6rem;
+  margin: 10px;
+  border-radius: 120px;
+  height: 6rem;
+}
+
+.desc-web {
+  font-size: 18px;
+}
+.address-web {
+  font-size: 14px;
+}
+.footer-text {
+  align-self: center;
+  color: white;
+  font-size: 20px;
+}
+
+.image-logo {
+  width: 6rem;
+  margin: 10px;
+  border-radius: 120px;
+  height: 6rem;
+}
+
+.image-article {
+  width: 10rem;
+  position: relative;
+  top: 20px;
+  margin-inline: 20px;
+}
+.title-article {
+  position: relative;
+  left: 10px;
+}
+
+.btn-category {
+  margin-inline: 10px;
+  height: 30px;
+  font-size: 18px;
+  background-color: salmon;
+}
+p {
+  text-align: justify;
+  margin: 10px;
+}
+
+a {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  nav {
+    width: 25%;
+  }
+  article {
+    width: 50%;
+  }
+  aside {
+    width: 25%;
+  }
+  .social-media {
+    display: block;
+  }
+  .container-social-media {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  nav {
+    width: 25%;
+  }
+  article {
+    width: 75%;
+  }
+  aside {
+    width: 100%;
+  }
+
+  .image-footer {
+    width: 5rem;
+    top: 30px;
+    position: relative;
+    border-radius: 120px;
+    height: 5rem;
+  }
+
+  .footer-title {
+    font-size: 30px;
+    left: 10px;
+    top: 10px;
+    color: white;
+    position: relative;
+  }
+  .desc-footer {
+    font-size: 20px;
+    text-align: right;
+    color: white;
+    position: relative;
+    left: 20px;
+  }
+  .social-media {
+    display: block;
+  }
+  .container-social-media {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  nav {
+    width: 100%;
+  }
+  article {
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+  }
+
+  .desc-web {
+    font-size: 16px;
+    position: relative;
+    bottom: 10px;
+    right: 5px;
+    text-align: center;
+  }
+  .address-web {
+    font-size: 14px;
+    position: relative;
+    bottom: 10px;
+    right: 5px;
+    text-align: center;
+  }
+
+  .image-logo {
+    width: 4rem;
+    position: relative;
+    border-radius: 120px;
+    height: 4rem;
+  }
+
+  .image-footer {
+    width: 5rem;
+    position: relative;
+    top: 12px;
+    left: 10px;
+    border-radius: 120px;
+    height: 5rem;
+  }
+
+  .image-article {
+    width: 5rem;
+    position: relative;
+    top: 20px;
+    margin-inline: 20px;
+  }
+
+  header {
+    background-color: powderblue;
+    font-size: xx-large;
+    width: 100%;
+    display: block;
+    text-align: center;
+    height: 200px;
+  }
+
+  footer {
+    background-color: darkorchid;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: xx-large;
+    height: 100%;
+  }
+
+  .footer-title {
+    font-size: 30px;
+    left: 12px;
+    position: relative;
+    color: white;
+    margin-inline: 50px;
+  }
+
+  .container-info-footer {
+    align-content: center;
+  }
+
+  .desc-footer {
+    font-size: 20px;
+    left: 12px;
+    position: relative;
+    color: white;
+    text-align: center;
+  }
+
+  .container-flex {
+    display: block;
+  }
+
+  .container-flex-footer {
+    display: block;
+  }
+
+  .social-media {
+    display: block;
+  }
+
+  .title-web {
+    font-size: 18px;
+    text-align: center;
+    bottom: 20px;
+    position: relative;
+  }
+
+  .container-social-media {
+    margin-left: 0;
+  }
+  .navigation-container {
+    display: flex;
+    justify-content: center;
+  }
+  .container-category {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}
