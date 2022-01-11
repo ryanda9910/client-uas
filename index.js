@@ -54,7 +54,7 @@ const createLinkSocialMediaTwitter = (item) => {
   socialMediaLinkTwitter.innerHTML = "Twitter";
   socialMediaLinkTwitter.setAttribute("class", "social-media");
   socialMediaLinkTwitter.setAttribute("target", "_blank");
-  socialMediaLinkTwitter.setAttribute("href", item.facebook);
+  socialMediaLinkTwitter.setAttribute("href", item.twitter);
   return socialMediaLinkTwitter;
 };
 
