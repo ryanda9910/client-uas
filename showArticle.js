@@ -6,10 +6,9 @@ let dataMenuItem = [
     nama: "",
   },
 ];
-const API_URL =
-  "http://wwwhenresearchcom-6db7f79c1504.cloudora-app.com:3000/api/v1";
+const API_URL = "https://www.henresearch.xyz/api/v1";
 
-const API_IMAGE = "http://wwwhenresearchcom-6db7f79c1504.cloudora-app.com:3000";
+const API_IMAGE = "https://www.henresearch.xyz";
 
 const navMenu = document.getElementById("navigationMenu");
 const categoryList = document.getElementById("containerCategory");

@@ -6,28 +6,26 @@ let dataMenuItem = [
     nama: "",
   },
 ];
-const API_URL =
-  "http://wwwhenresearchcom-6db7f79c1504.cloudora-app.com:3000/api/v1";
+const API_URL = "https://www.henresearch.xyz/api/v1";
 
-const API_IMAGE = "http://wwwhenresearchcom-6db7f79c1504.cloudora-app.com:3000";
+const API_IMAGE = "https://www.henresearch.xyz";
 
 const navMenu = document.getElementById("navigationMenu");
 const categoryList = document.getElementById("containerCategory");
 const listArticle = document.getElementById("containerParentArticle");
 
 const detailArticle = document.getElementById("containerParentIdArticle");
-const footerText = document.getElementById('footerText')
+const footerText = document.getElementById("footerText");
 const headerContainer = document.getElementById("headerContainer");
 const footerContainer = document.getElementById("footerContainer");
 const socialMediaContainer = document.getElementById(
   "containerLinkSocialMedia"
 );
 
-
 const createLinkSocialMediaInstagram = (item) => {
   let socialMediaLinkInstagram = document.createElement("a");
   socialMediaLinkInstagram.style.marginBlock = "10px";
-  socialMediaLinkInstagram.style.color="white";
+  socialMediaLinkInstagram.style.color = "white";
   socialMediaLinkInstagram.innerHTML = "Instagram";
   socialMediaLinkInstagram.setAttribute("class", "social-media");
   socialMediaLinkInstagram.setAttribute("target", "_blank");
@@ -38,7 +36,7 @@ const createLinkSocialMediaInstagram = (item) => {
 const createLinkSocialMediaFacebook = (item) => {
   let socialMediaLinkFacebook = document.createElement("a");
   socialMediaLinkFacebook.style.marginBlock = "10px";
-  socialMediaLinkFacebook.style.color="white";
+  socialMediaLinkFacebook.style.color = "white";
   socialMediaLinkFacebook.innerHTML = "Facebook";
   socialMediaLinkFacebook.setAttribute("class", "social-media");
   socialMediaLinkFacebook.setAttribute("target", "_blank");
@@ -49,7 +47,7 @@ const createLinkSocialMediaFacebook = (item) => {
 const createLinkSocialMediaTwitter = (item) => {
   let socialMediaLinkTwitter = document.createElement("a");
   socialMediaLinkTwitter.style.marginBlock = "10px";
-  socialMediaLinkTwitter.style.color="white";
+  socialMediaLinkTwitter.style.color = "white";
   socialMediaLinkTwitter.innerHTML = "Twitter";
   socialMediaLinkTwitter.setAttribute("class", "social-media");
   socialMediaLinkTwitter.setAttribute("target", "_blank");
@@ -156,7 +154,7 @@ const footerInformation = fetch(`${API_URL}/information`)
     data?.data.map((item) => {
       footerContainer.appendChild(createFooterImageContainer(item));
       footerContainer.appendChild(setDescFooter(item));
-      footerText.innerHTML=item.copyright
+      footerText.innerHTML = item.copyright;
     });
   })
   .catch((err) => {
@@ -233,17 +231,17 @@ const containerArticle = (item) => {
   contentArticle.setAttribute("class", "container-flex");
   contentArticle.appendChild(setImageContainer(item));
   contentArticle.appendChild(setContentContainer(item));
-  contentArticle.addEventListener(('click'),()=>{
-    localStorage.setItem('article_id',item.id)
-    window.location.href="./showArticle.html"
-  })
+  contentArticle.addEventListener("click", () => {
+    localStorage.setItem("article_id", item.id);
+    window.location.href = "./showArticle.html";
+  });
   return contentArticle;
 };
 
 const listArticleItem = fetch(`${API_URL}/artikel`)
   .then((response) => {
     return response.json();
-  })  
+  })
   .then((data) => {
     data?.data.map((item) => {
       listArticle.appendChild(containerArticle(item));
@@ -253,24 +251,21 @@ const listArticleItem = fetch(`${API_URL}/artikel`)
     console.error(err);
   });
 
-  // const showArticle = (id) => {
-  //   fetch(`${API_URL}/artikel/${id}`)
-  //   .then((response) => {
-  //     return response.json();
-  //   })  
-  //   .then((data) => {
-  //     data?.data.map((item) => {
-  //       console.log(item)
-  //       detailArticle.appendChild(containerArticle(item));
-  //     });
-  //   })
-  //   .catch((err) => {
-  //     console.error(err);
-  //   });
-  // }
-  
-  
-
+// const showArticle = (id) => {
+//   fetch(`${API_URL}/artikel/${id}`)
+//   .then((response) => {
+//     return response.json();
+//   })
+//   .then((data) => {
+//     data?.data.map((item) => {
+//       console.log(item)
+//       detailArticle.appendChild(containerArticle(item));
+//     });
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
+// }
 
 const setImageCategory = (item) => {
   let imageCategory = document.createElement("img");
